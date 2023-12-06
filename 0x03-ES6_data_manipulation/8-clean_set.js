@@ -1,5 +1,6 @@
 export default function cleanSet(set, startString) {
   const result = [];
+  let str = '';
   if (startString === undefined) {
     return '';
   }
@@ -13,5 +14,6 @@ export default function cleanSet(set, startString) {
       }
     }
   }
-  return result.join('-');
+  str = result.join('-');
+  return str;
 }
