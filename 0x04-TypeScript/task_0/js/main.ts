@@ -5,18 +5,33 @@ interface Student {
     location: string;
 }
 
-const student1: Student = {
+const studentOne: Student = {
     firstName: "Abel",
     lastName: "Mume",
     age: 29,
     location: "addis"
 }
 
-const student2: Student = {
+const studentTwo: Student = {
     firstName: "Asher",
     lastName: "Tolchard",
     age: 28,
-    location: "Istandbul"
+    location: "Istanbul"
 }
 
-let arr: Student[]=[student1, student2];
+const studentsList:Student[] = [studentOne, studentTwo];
+
+const tableElement: HTMLTableElement = document.createElement('table');
+
+const headerRow = document.createElement('tr');
+headerRow.innerHTML = `<th>firstName</th><th>lastName</th><th>Age</th><th>Location</th>`;
+tableElement.appendChild(headerRow);
+for (const student of studentsList) {
+    const row : HTMLTableRowElement = document.createElement('tr')
+    row.innerHTML = `
+        <td>${student.firstName}</td>
+        <td>${student.lastName}</td>
+        <td>${student.age}</td>
+        <td>${student.location}</td>
+        tableElement.appendChild(row)`;
+}

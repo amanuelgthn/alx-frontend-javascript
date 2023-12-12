@@ -35,10 +35,10 @@ export class Teacher implements TeacherInterface {
 
 const createEmployee = (salary: string | number ): Teacher | Director => {
     if (parseInt(salary as string) < 500) {
-        return new Teacher;
+        return new Teacher();
     }
     else {
-        return new Director;
+        return new Director();
     }
 }
 
