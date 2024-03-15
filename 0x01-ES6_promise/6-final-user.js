@@ -24,7 +24,7 @@ export default async function handleProfileSignup(
       value: upload,
     });
   } catch (err) {
-    result.push({ status: 'rejected', value: err});
+    result.push({ status: 'rejected', value: err });
   }
 
   return result;
