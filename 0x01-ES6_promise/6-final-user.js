@@ -13,7 +13,7 @@ export default async function handleProfileSignup(
   } catch (err) {
     result.push({
       status: 'rejected',
-      value: err.toString(),
+      value: err,
     });
   }
 
@@ -24,7 +24,7 @@ export default async function handleProfileSignup(
       value: upload,
     });
   } catch (err) {
-    result.push({ status: 'rejected', value: err.toString() });
+    result.push({ status: 'rejected', value: err});
   }
 
   return result;
