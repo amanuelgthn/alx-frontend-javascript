@@ -8,15 +8,8 @@ export default async function handleProfileSignup(
 ) {
   return new Promise(() => {
     const result = [];
-    try {
       const user = signUpUser(firstName, lastName);
       result.push({ status: 'fulfiled', value: user });
-    } catch (err) {
-      result.push({
-        status: 'rejected',
-        value: err,
-      });
-    }
 
     try {
       const upload = uploadPhoto(filename);
@@ -25,7 +18,7 @@ export default async function handleProfileSignup(
         value: upload,
       });
     } catch (err) {
-      result.push({ status: 'rejected', value: err });
+      result.push({ status: 'rejected', value: err.tostring() });
     }
 
     return result;
