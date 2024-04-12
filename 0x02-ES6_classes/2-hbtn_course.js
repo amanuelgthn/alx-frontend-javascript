@@ -24,15 +24,15 @@ class HolbertonCourse {
   }
 
   set name(name) {
-    this.name = name;
+    this._name = name;
   }
 
   set length(length) {
-    this.length = length;
+    this._length = length;
   }
 
   set students(students) {
-    this.students = students;
+    this._students = students;
   }
 }
 
