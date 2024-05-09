@@ -1,10 +1,6 @@
 export default function getStudentsByLocation(arr, city) {
   function filterCity(arr1) {
-    if (arr1.location === city) {
-      return true;
+      return arr1.location === city;
     }
-
-    return false;
-  }
   return arr.filter(filterCity);
 }
