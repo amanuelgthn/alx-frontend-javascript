@@ -1,1 +1,1 @@
-export default function WeakMap
+export const weakMap = WeakMap();

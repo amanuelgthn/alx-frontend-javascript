@@ -10,7 +10,7 @@ export default function cleanSet(set, startString) {
   for (const item of set) {
     if (item !== undefined && item.length > startString.length) {
       if (item.slice(0, startString.length) === startString) {
-        result.push(item.slice(startString.length).replace('-', ''));
+        result.push(item.slice(startString.length));
       }
     }
   }
